@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Contact Us Page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" />
+    </head>
+    <body>
+    <div class="container">
+        <% if(success && success.length > 0) { %>
+            <div class="alert alert-success" role="alert"><%= success%></div>
+        <% } %>
+    </div>
+    <div class="container">
+        <% if(error && error.length > 0) { %>
+            <div class="alert alert-danger" role="alert"><%= error%></div>
+        <% } %>
+    </div>
+    // form done using semantic UI
+    <div class="ui main text container segement">
+        <div class="ui huge header">Contact Us!</div>
+        <form class="ui form" action="/login" method="POST">
+            <div class="field">
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Name*">
+            </div>
+            <div class="field">
+                <label>Email</label>
+                <input type="text" name="email" placeholder="Email*">
+            </div>
+            <div class="field">
+                <label>Subject</label>
+                <input type="text" name="subject" placeholder="Subject">
+            </div>
+            <div class="field">
+                <label>Blog Content</label>
+                <textarea rows="6" name="message" placeholder="Message*"></textarea>
+            </div>
+            <input class="ui violet big basic button" type="submit">
+        </form>
+    </div>
+    
+    // form done using Bootstrap
+    <div class="row">
+        <h1 style="text-align: center">Contact Us!</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/login" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="name" placeholder="Name*">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="email" placeholder="Email*">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="subject" placeholder="Subject">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="6" name="message" placeholder="Message*"></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </body>
+</html>
+
+
